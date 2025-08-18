@@ -1,5 +1,5 @@
 {
-    "name": "biz/erps",
+    "name": "biz/erp",
     "alias": "进销存系统",
     "description": "erp进销存系统",
     "type": "library",

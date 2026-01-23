@@ -1,32 +1,32 @@
 {
-    "name": "biz/erp",
-    "alias": "进销存系统",
-    "description": "erp进销存系统",
+    "name": "daga/erp",
+    "alias": "财务进销存",
+    "description": "财务进销存管理",
     "type": "library",
     "version": "1.0.0",
-    "keywords": ["bizadmin", "extension"],
-    "homepage": "https://github.com/biz/erp",
+    "keywords": ["owl-admin", "extension"],
+    "homepage": "https://github.com/daga/erp",
     "license": "MIT",
     "authors": [
         {
-            "name": "Administrator",
-            "email": "raoxikui@163.com"
+            "name": "raoxikui",
+            "email": "dagasmart@qq.com"
         }
     ],
     "require": {
         "php": ">=8.0",
-        "dagasmart/bizadmin": "*"
+        "slowlyo/owl-admin": "*"
     },
     "autoload": {
         "psr-4": {
-            "Biz\\Erp\\": "src/"
+            "Daga\\Erp\\": "src/"
         }
     },
     "extra": {
-        "bizadmin": "Biz\\Erp\\ErpServiceProvider",
+        "owl-admin": "Daga\\Erp\\ErpServiceProvider",
         "laravel": {
             "providers": [
-                "Biz\\Erp\\ErpServiceProvider"
+                "Daga\\Erp\\ErpServiceProvider"
             ]
         }
     }

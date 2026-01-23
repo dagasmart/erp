@@ -1,15 +1,14 @@
 <?php
 
-namespace Biz\Erps\Http\Controllers;
+namespace Daga\Erp\Http\Controllers;
 
-use DagaSmart\BizAdmin\Controllers\AdminController;
+use Dagasmart\BizAdmin\Controllers\AdminController;
 
-class ErpController extends AdminController
+class ErpController
 {
     public function index()
     {
-        $page = $this->basePage()->body('Erps Extension.');
 
-        return $this->response()->success($page);
+
     }
 }

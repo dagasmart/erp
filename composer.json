@@ -1,0 +1,33 @@
+{
+    "name": "dagasmart/erp",
+    "alias": "进销存系统",
+    "description": "erp进销存系统",
+    "type": "library",
+    "version": "1.0.0",
+    "keywords": ["bizadmin", "extension"],
+    "homepage": "https://github.com/dagasmart/erp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Administrator",
+            "email": "raoxikui@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "dagasmart/bizadmin": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DagaSmart\\Erp\\": "src/"
+        }
+    },
+    "extra": {
+        "bizadmin": "DagaSmart\\Erp\\ErpServiceProvider",
+        "laravel": {
+            "providers": [
+                "DagaSmart\\Erp\\ErpServiceProvider"
+            ]
+        }
+    }
+}

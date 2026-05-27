@@ -10,8 +10,6 @@ return new class extends Migration
 
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up(): void
     {
@@ -32,7 +30,7 @@ return new class extends Migration
             $table->integer('crm_state')->default(1)->nullable()->comment('状态：0关闭，1开启');
             $table->string('crm_recode')->nullable()->comment('推荐码');
             $table->integer('mer_id')->default(0)->nullable()->comment('商户id');
-            $table->string('module',50)->nullable()->comment('模块');
+            $table->string('module', 50)->nullable()->comment('模块');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -40,8 +38,6 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down(): void
     {
@@ -51,15 +47,12 @@ return new class extends Migration
 
     /**
      * rename the old migrations.
-     * @return void
      */
     private function rename(): void
     {
         if (Schema::hasTable(self::table)) {
-            //备份已存在表
-            Schema::rename(self::table, 'backup_' . self::table . '_' .date('YmdHis'));
+            // 备份已存在表
+            Schema::rename(self::table, 'backup_'.self::table.'_'.date('YmdHis'));
         }
     }
-
-
 };

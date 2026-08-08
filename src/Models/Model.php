@@ -3,7 +3,6 @@
 namespace DagaSmart\Erp\Models;
 
 use DagaSmart\BizAdmin\Models\BaseModel;
-use DagaSmart\BizAdmin\Scopes\ActiveScope;
 
 /**
  *基座模型
@@ -25,7 +24,6 @@ class Model extends BaseModel
 
     protected static function booted(): void
     {
-        static::addGlobalScope(new ActiveScope(self::schema));
         parent::booted();
     }
 
